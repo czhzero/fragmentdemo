@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="手机号 : " />
+
+
+    <TextView
+        android:id="@+id/tv_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13000000000" />
+
+
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:padding="5dp"
+        android:text="登出"
+        android:textColor="#FB464A" />
+
+
+</LinearLayout>

@@ -1,15 +1,13 @@
 package com.chen.fragment.api;
 
 import android.content.Context;
+
 import java.util.HashMap;
 
 
-/**
- * refactor by chen 2015/12/21
- */
 public class Server extends BaseServer {
 
-    private static final String SERVER_URL = "从本地文件里读取";
+    private static final String SERVER_URL = "TODO";
 
 
     private static ServerApi sServerApi;
