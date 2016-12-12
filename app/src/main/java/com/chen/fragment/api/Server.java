@@ -2,12 +2,15 @@ package com.chen.fragment.api;
 
 import android.content.Context;
 
+import com.chen.fragment.utils.Constant;
+import com.chen.fragment.utils.SharedPrefsUtil;
+
 import java.util.HashMap;
 
 
 public class Server extends BaseServer {
 
-    private static final String SERVER_URL = "TODO";
+    private static final String SERVER_URL = "http://api.gomrwind.com:5000";
 
 
     private static ServerApi sServerApi;
@@ -49,7 +52,9 @@ public class Server extends BaseServer {
     public HashMap<String, String> getRequestHead() {
         HashMap<String, String> headMap = new HashMap<>();
         if (sContext != null) {
-            headMap.put(HEAD_KEY_TOKEN, "");
+            SharedPrefsUtil sharedPrefsUtil = new SharedPrefsUtil(sContext.getApplicationContext(),
+                    Constant.SharedPrefrence.SHARED_NAME);
+            headMap.put(HEAD_KEY_TOKEN, sharedPrefsUtil.getStringSP(Constant.SharedPrefrence.TOKEN, ""));
         }
         return headMap;
     }

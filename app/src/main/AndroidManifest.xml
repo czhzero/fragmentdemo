@@ -23,7 +23,11 @@
 
 
         <activity
-            android:name=".activity.TaskDetailActivity"
+            android:name=".activity.TaskLocationSignActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.TaskScanSignActivity"
             android:screenOrientation="portrait" />
 
 

@@ -71,7 +71,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         Server.getServerApi(mContext).requestCode(tel, new Callback<CodeCallback>() {
             @Override
             public void success(CodeCallback codeCallback, Response response) {
-                Toast.makeText(mContext, codeCallback.code, Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "验证码已发送", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -107,6 +107,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             public void success(LoginCallback loginCallback, Response response) {
                 mSharedPrefs.setStringSP(Constant.SharedPrefrence.TEL, loginCallback.tel);
                 mSharedPrefs.setStringSP(Constant.SharedPrefrence.TOKEN, loginCallback.token);
+                Server.resetServerApi();
                 jumpTaskList();
             }
 

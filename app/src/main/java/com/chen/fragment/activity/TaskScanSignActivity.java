@@ -1,17 +1,19 @@
 package com.chen.fragment.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.chen.fragment.R;
 
-public class TaskDetailActivity extends AppCompatActivity {
+/**
+ * Created by chenzhaohua on 16/11/21.
+ */
+public class TaskScanSignActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_task_list);
-
-        
+        setContentView(R.layout.activity_task_scan_sign);
     }
+
+
 }

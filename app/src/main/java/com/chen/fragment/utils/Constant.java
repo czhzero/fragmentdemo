@@ -10,4 +10,11 @@ public class Constant {
         public static final String TOKEN = "token";
         public static final String TEL = "tel";
     }
+
+    public static class TaskStatus {
+        public static final String COMPLETE = "COMPLETE";            // 已完成
+        public static final String CLOSE = "CLOSE";                  // 已关闭
+        public static final String CREATE = "CREATE";                // 创建
+    }
+
 }
