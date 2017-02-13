@@ -13,6 +13,7 @@ import com.chen.fragment.api.Server;
 import com.chen.fragment.model.CodeCallback;
 import com.chen.fragment.model.LoginCallback;
 import com.chen.fragment.utils.Constant;
+
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -107,6 +108,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             public void success(LoginCallback loginCallback, Response response) {
                 mSharedPrefs.setStringSP(Constant.SharedPrefrence.TEL, loginCallback.tel);
                 mSharedPrefs.setStringSP(Constant.SharedPrefrence.TOKEN, loginCallback.token);
+                mSharedPrefs.setStringSP(Constant.SharedPrefrence.MAN_ID, loginCallback.man_id);
                 Server.resetServerApi();
                 jumpTaskList();
             }

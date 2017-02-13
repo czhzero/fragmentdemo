@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.chen.fragment.R;
+import com.chen.fragment.activity.TaskHourSignActivity;
 import com.chen.fragment.activity.TaskLocationSignActivity;
 import com.chen.fragment.activity.TaskScanSignActivity;
 import com.chen.fragment.adapter.CommonAdapter;
@@ -40,6 +41,7 @@ public class StaticFragmentB extends BaseFragment {
     private CommonAdapter mAdapter;
     private List<TaskListContent> mList;
     private TextView tv_empty;
+    private TextView tv_start_work;
 
     @Nullable
     @Override
@@ -63,6 +65,7 @@ public class StaticFragmentB extends BaseFragment {
 
     private void initView(View view) {
 
+        tv_start_work = (TextView) view.findViewById(R.id.tv_start_work);
         tv_empty = (TextView) view.findViewById(R.id.tv_empty);
 
         lv_task_list = (ListView) view.findViewById(R.id.lv_task_list);
@@ -121,6 +124,15 @@ public class StaticFragmentB extends BaseFragment {
             }
         });
 
+        tv_start_work.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(mContext, TaskHourSignActivity.class);
+                mContext.startActivity(intent);
+            }
+        });
+
     }
 
 
@@ -154,5 +166,8 @@ public class StaticFragmentB extends BaseFragment {
         mList.addAll(list);
         mAdapter.notifyDataSetChanged();
     }
+
+
+
 
 }

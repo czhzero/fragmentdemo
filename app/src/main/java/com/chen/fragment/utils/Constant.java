@@ -9,6 +9,7 @@ public class Constant {
         public static final String SHARED_NAME = "look";
         public static final String TOKEN = "token";
         public static final String TEL = "tel";
+        public static final String MAN_ID = "man_id";
     }
 
     public static class TaskStatus {

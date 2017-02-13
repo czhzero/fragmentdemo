@@ -3,6 +3,8 @@ package com.chen.fragment.api;
 
 import com.chen.fragment.model.AttendanceTaskDetailCallback;
 import com.chen.fragment.model.CodeCallback;
+import com.chen.fragment.model.HourSignDetailCallback;
+import com.chen.fragment.model.HourSignWorkParam;
 import com.chen.fragment.model.LoginCallback;
 import com.chen.fragment.model.SignInCallback;
 import com.chen.fragment.model.SignInParam;
@@ -71,6 +73,17 @@ public interface ServerApi {
      */
     @POST("/WindMission/mission/attendance/operateSign")
     void signIn(@Body SignInParam param, Callback<SignInCallback> callback);
+
+
+
+    /**
+     * 开始上班
+     *
+     * @param param
+     * @param callback
+     */
+    @POST("/WindMission/attendance/hourSign/startWork")
+    void startWork(@Body HourSignWorkParam param, Callback<HourSignDetailCallback> callback);
 
 
 }
