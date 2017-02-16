@@ -45,8 +45,15 @@ public class BaseFragment extends Fragment {
 
 
     @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        LogUtils.d(this.getClass().getSimpleName() + " onActivityCreated");
+    }
+
+    @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        LogUtils.d(this.getClass().getSimpleName() + " onActivityResult");
     }
 
     @Override
@@ -122,6 +129,7 @@ public class BaseFragment extends Fragment {
     @Override
     public void setArguments(Bundle args) {
         super.setArguments(args);
+        LogUtils.d(this.getClass().getSimpleName() + " setArguments");
     }
 
 
